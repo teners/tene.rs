@@ -1,3 +1,28 @@
+@font-face {
+    font-family: EBGaramondRegular;
+    src: url("fonts/EBGaramondRegular.ttf");
+}
+
+@font-face {
+    font-family: EBGaramondItalic;
+    src: url("fonts/EBGaramondItalic.ttf");
+}
+
+@font-face {
+    font-family: BebasNeue;
+    src: url("fonts/BebasNeue Light.otf");
+}
+
+@font-face {
+    font-family: ProximaNova;
+    src: url("fonts/Proxima Nova Regular.otf");
+}
+
+@font-face {
+    font-family: ProximaNovaBold;
+    src: url("fonts/Proxima Nova Semibold.otf");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -14,15 +39,13 @@ header, nav {
 
 #header {
     padding: 15px 50px 14px 50px;
-    /*background-color: #0D0D0D;*/
-    /*background-color: rgba(217, 217, 217, 0.5);*/
     font-family: "ProximaNovaBold", sans-serif;
     font-size: 11pt;
-    text-transform: uppercase;
+    .upper
     text-decoration: none;
 }
 
-#header::after {
+#header::after, #photo::after {
     content: "";
     display: block;
     clear: both;
@@ -30,11 +53,13 @@ header, nav {
 
 #nav-left {
     float: left;
+    padding-left: 20%;
 }
 
 #nav-right {
     color: #0D0D0D;
     float: right;
+    padding-right: 20%;
 }
 
 #header nav ul {
@@ -48,7 +73,6 @@ header, nav {
 }
 
 #header #nav-right ul a {
-    /*color: rgba(217, 217, 217, 1);*/
     color: rgba(13, 13, 13, 1);
     text-decoration: none;
 }
@@ -68,38 +92,20 @@ header, nav {
 
 #photo h1 {
     text-decoration: none;
-    color: rgba(217, 217, 217, 0.8);
+    color: rgba(217, 217, 217, 0.7);
     font-size: 60pt;
     position: absolute;
-    /*padding: 60px 0 0 30px;*/
     top: 240px;
-    left: 70px;
+    left: 100px;
     font-family: BebasNeue, sans-serif;
-    text-transform: uppercase;
+    .upper
 }
 
-@font-face {
-    font-family: EBGaramondRegular;
-    src: url("fonts/EBGaramondRegular.ttf");
+#main {
+    font-family: ProximaNova, sans-serif;
+    padding: 30px 20% 0 20%;
 }
 
-@font-face {
-    font-family: EBGaramondItalic;
-    src: url("fonts/EBGaramondItalic.ttf");
-}
-
-@font-face {
-    font-family: BebasNeue;
-    /*src: url("fonts/BebasNeue.otf");*/
-    src: url("fonts/BebasNeue Light.otf");
-}
-
-@font-face {
-    font-family: ProximaNova;
-    src: url("fonts/Proxima Nova Regular.otf");
-}
-
-@font-face {
-    font-family: ProximaNovaBold;
-    src: url("fonts/Proxima Nova Semibold.otf");
+.time {
+    float: right !important;
 }
