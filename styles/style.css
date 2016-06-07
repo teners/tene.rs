@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+header, nav {
+    display: block;
+}
+
+#header {
+    padding: 15px 50px 14px 50px;
+    /*background-color: #0D0D0D;*/
+    /*background-color: rgba(217, 217, 217, 0.5);*/
+    font-family: "ProximaNovaBold", sans-serif;
+    font-size: 11pt;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#header::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#nav-left {
+    float: left;
+}
+
+#nav-right {
+    color: #0D0D0D;
+    float: right;
+}
+
+#header nav ul {
+    margin: 0;
+    list-style: none;
+}
+
+#header #nav-left ul a {
+    color: rgba(52, 136, 153, 1);
+    text-decoration: none;
+}
+
+#header #nav-right ul a {
+    /*color: rgba(217, 217, 217, 1);*/
+    color: rgba(13, 13, 13, 1);
+    text-decoration: none;
+}
+
+#header nav ul li {
+    display: inline-block;
+}
+
+#header #nav-right ul li {
+    margin-left: 35px;
+}
+
+#photo {
+    display: inline-block;
+    position: relative;
+}
+
+#photo h1 {
+    text-decoration: none;
+    color: rgba(217, 217, 217, 0.8);
+    font-size: 60pt;
+    position: absolute;
+    /*padding: 60px 0 0 30px;*/
+    top: 240px;
+    left: 70px;
+    font-family: BebasNeue, sans-serif;
+    text-transform: uppercase;
+}
+
+@font-face {
+    font-family: EBGaramondRegular;
+    src: url("fonts/EBGaramondRegular.ttf");
+}
+
+@font-face {
+    font-family: EBGaramondItalic;
+    src: url("fonts/EBGaramondItalic.ttf");
+}
+
+@font-face {
+    font-family: BebasNeue;
+    /*src: url("fonts/BebasNeue.otf");*/
+    src: url("fonts/BebasNeue Light.otf");
+}
+
+@font-face {
+    font-family: ProximaNova;
+    src: url("fonts/Proxima Nova Regular.otf");
+}
+
+@font-face {
+    font-family: ProximaNovaBold;
+    src: url("fonts/Proxima Nova Semibold.otf");
+}
