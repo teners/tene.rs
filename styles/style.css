@@ -34,13 +34,13 @@ header, nav {
 }
 
 #header {
-    /*padding: 15px 50px 14px 50px;*/
+    min-width: 1000px !important;
     padding: 1rem 3rem 1rem 3rem;
-    min-width: 1000px;
     font-family: "ProximaNovaBold", sans-serif;
     font-size: 1.5rem;
     .upper
     text-decoration: none;
+    line-height: 24px;
 }
 
 #header::after, #photo::after {
