@@ -34,7 +34,8 @@ header, nav {
 }
 
 #header {
-    padding: 15px 50px 14px 50px;
+    /*padding: 15px 50px 14px 50px;*/
+    padding: 1rem 3rem 1rem 3rem;
     min-width: 1000px;
     font-family: "ProximaNovaBold", sans-serif;
     font-size: 1.5rem;
@@ -94,7 +95,7 @@ header, nav {
 }
 
 #header #nav-right ul li {
-    margin-left: 35px;
+    margin-left: 25px;
 }
 
 #photo {
