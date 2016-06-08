@@ -34,12 +34,12 @@ header, nav {
 }
 
 #header {
-    min-width: 1000px !important;
     padding: 1rem 0 1rem 0;
     font-family: "ProximaNovaBold", sans-serif;
     font-size: 1.5rem;
-. upper text-decoration: none;
+    text-decoration: none;
     line-height: 24px;
+    text-transform: uppercase;
 }
 
 #header::after, #photo::after {
@@ -51,7 +51,7 @@ header, nav {
 #title {
     padding-left: 30rem;
     font-size: 2rem;
-    width: 30%;
+    width: 40%;
     float: left;
 }
 
@@ -59,7 +59,7 @@ header, nav {
     color: #0D0D0D;
     float: right;
     padding-right: 30rem;
-    width: 70%;
+    width: 60%;
     text-align: right;
 }
 
@@ -101,7 +101,7 @@ header, nav {
     font-size: 8rem;
     position: absolute;
     top: 45%;
-    left: 10rem;
+    left: 10%;
     font-family: BebasNeue, sans-serif;
 . upper;
 
@@ -123,24 +123,76 @@ header, nav {
     float: right !important;
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1280px) {
+    #photo h1 {
+        font-size: 4.5rem !important;
+        left: 5%;
+        top: 50%;
+    }
+
+    #photo h1 span {
+        font-size: 80%;
+        padding-top: 0;
+    }
+
     #title {
         font-size: 2rem;
-        width: 30%;
+        width: 40%;
         float: left;
-        padding-left: 0;
+        padding-left: 5rem;
     }
 
     #nav-right {
         color: #0D0D0D;
         float: right;
-        width: 70%;
-        text-align: right;
-        padding-right: 0;
+        width: 60%;
+        padding-right: 5rem;
     }
 
     #main {
         font-family: ProximaNova, sans-serif;
-        padding: 3rem 0 0 0;
+        padding: 3rem 5rem 0 5rem;
+    }
+}
+
+@media screen and (max-width:820px) {
+    #title {
+        font-size: 2rem;
+        width: 100%;
+        float: left;
+        padding-left: 2rem;
+        text-align: center;
+    }
+
+    #nav-right {
+        color: #0D0D0D;
+        float: left;
+        width: 100%;
+        padding-right: 2rem;
+        padding-left: 1rem;
+        text-align: center;
+    }
+
+    #header #nav-right ul li {
+        margin-left: 1rem;
+
+    }
+
+    #main {
+        font-family: ProximaNova, sans-serif;
+        padding: 3rem 2rem 0 2rem;
+    }
+}
+
+@media screen and (max-width:480px) {
+    #photo h1 {
+        font-size: 3.5rem !important;
+        left: 5%;
+        top: 50%;
+    }
+
+    #photo h1 span {
+        font-size: 80%;
+        padding-top: 0;
     }
 }
