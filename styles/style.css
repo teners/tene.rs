@@ -185,14 +185,7 @@ header, nav {
 
     #iwannajob {
         display: block !important;
-        position: fixed;
-        top: 87% !important;
-        bottom: 0 !important;
-        left: 0 !important;
-        right: 0 !important;
-        width: 100% !important;
-        /*height: 150px;*/
-        max-width: 900px !important;
+        top: 80% !important;
     }
 }
 
@@ -206,6 +199,10 @@ header, nav {
     #photo h1 span {
         font-size: 80%;
         padding-top: 0;
+    }
+
+    #iwannajob {
+        visibility: hidden;
     }
 }
 
