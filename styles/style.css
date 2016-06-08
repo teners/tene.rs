@@ -196,3 +196,9 @@ header, nav {
         padding-top: 0;
     }
 }
+
+#iwannajob {
+    cursor: pointer;
+    display: block !important;
+    top: 6rem;
+}
