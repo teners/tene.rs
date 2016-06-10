@@ -211,3 +211,22 @@ header, nav {
     display: block !important;
     top: 6rem;
 }
+
+#footer {
+    padding: 0.5rem 0 0.5rem 0;
+    background-color: rgba(17,17,17,0.95);
+    text-align: center;
+    margin: 3rem 0 0 0 !important;
+    margin-bottom: 0;
+    color: #D9D9D9;
+    font-family: ProximaNova, sans-serif;
+    font-size: 90%
+}
+
+#footer p {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding 0;
+}
+
