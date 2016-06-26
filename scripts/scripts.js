@@ -10,9 +10,9 @@ hide = function(container) {
 };
 
 
-$(document).ready(function(){
+/*$(document).ready(function(){
     $("#header").fadeOut(0).fadeIn(700);
     $("#photo").fadeOut(0).delay(700).show(1000);
     $("#main").fadeOut(0).delay(1700).slideDown(700);
     $("#footer").hide(0).delay(2400).show(700);
-});
+});*/
