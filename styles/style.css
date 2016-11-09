@@ -93,6 +93,11 @@ header, nav {
 #photo {
     display: inline-block;
     position: relative;
+    background-image: url("../content/images/photo.jpg");
+    width: 100%;
+    height: 400px; 
+    background-position: center center;
+    background-size: cover;
 }
 
 #photo h1 {
@@ -100,7 +105,7 @@ header, nav {
     color: rgba(217, 217, 217, 0.7);
     font-size: 8rem;
     position: absolute;
-    top: 45%;
+    top: 65%;
     left: 10%;
     font-family: BebasNeue, sans-serif;
 . upper;
@@ -124,10 +129,14 @@ header, nav {
 }
 
 @media screen and (max-width:1280px) {
+    #photo {
+        height: 300px;
+    }
+
     #photo h1 {
         font-size: 4.5rem !important;
         left: 5%;
-        top: 50%;
+        top: 70%;
     }
 
     #photo h1 span {
@@ -157,30 +166,34 @@ header, nav {
 
 @media screen and (max-width:820px) {
     #title {
-        font-size: 2rem;
+        font-size: 2.5rem;
         width: 100%;
-        float: left;
-        padding-left: 2rem;
+        padding: 0;
         text-align: center;
     }
 
     #nav-right {
-        color: #0D0D0D;
         float: left;
         width: 100%;
         padding-right: 2rem;
         padding-left: 1rem;
+        padding-top: 0.5rem;
         text-align: center;
+        font-size: 2rem;
     }
 
     #header #nav-right ul li {
-        margin-left: 1rem;
+        margin-left: 2rem;
+    }
 
+    #photo h1 {
+        font-size: 4rem !important;
     }
 
     #main {
         font-family: ProximaNova, sans-serif;
         padding: 3rem 2rem 0 2rem;
+        font-size: 100%;
     }
 
     #iwannajob {
@@ -189,11 +202,20 @@ header, nav {
     }
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:600px) {
+    #header #nav-right ul li {
+        margin-left: 0rem;
+        font-size: 1.5rem;
+    }
+
+    #photo {
+        height: 200px;
+    }
+
     #photo h1 {
-        font-size: 3.5rem !important;
-        left: 5%;
-        top: 50%;
+        font-size: 3rem !important;
+        top: 60%;
+        line-height: 80%;
     }
 
     #photo h1 span {
@@ -203,6 +225,31 @@ header, nav {
 
     #iwannajob {
         visibility: hidden;
+    }
+
+    #main {
+        font-size: 100%;
+    }
+
+    .time {
+        display: none;
+    }
+
+    dd { 
+        margin-left: 0 !important;
+        margin-bottom: 1rem;
+    }
+}
+
+
+@media screen and (max-width:320px) {
+    #nav-right ul li {
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    #photo h1 {
+        font-size: 2.5rem !important;
     }
 }
 
