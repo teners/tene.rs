@@ -66,14 +66,16 @@ body {
     padding: 0 0.7rem 0 0.5rem;
 }
 
-.links a { 
-    border-bottom: 5px solid rgba(74, 189, 172, 0.02);
+.links a {
+    border-bottom: 3px solid #4abdac;
+    box-shadow: inset 0 -4px 0 #4abdac;
     text-decoration: none;
     color: white;
 }
 
 .links a:hover {
-    border-bottom: 5px solid #4abdac;
+    background-color: #4abdac;
+    border-bottom: 3px solid #4abdac;
 }
 
 .muted {
@@ -82,13 +84,16 @@ body {
 }
 
 .muted a {
-    border-bottom: 5px solid rgba(255, 17, 104, 0.02);
+    border-bottom: 3px solid #ff1168;
+    box-shadow: inset 0 -4px 0 #ff1168;
     text-decoration: none;
     color: #8f8f8f;
 }
 
 .muted a:hover {
-    border-bottom: 5px solid #ff1168;
+    color: #fff;
+    background-color: #ff1168;
+    border-bottom: 3px solid #ff1168;
 }
 
 
