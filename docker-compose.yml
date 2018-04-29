@@ -1,0 +1,10 @@
+teners.me:
+    image: abiosoft/caddy
+    volumes:
+        - ./Caddyfile:/etc/Caddyfile
+        - ${CADDY_CRT}:/root/.caddy
+        - .:/srv
+    ports:
+        - "80:80"
+        - "443:443"
+    restart: always

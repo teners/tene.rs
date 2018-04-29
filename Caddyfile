@@ -1,0 +1,7 @@
+teners.me
+
+ext .html .pdf
+
+errors {
+    404 404.html
+}
