@@ -1,7 +1,8 @@
-@import url('font/vladivostok.css');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans');
 
 * {
-    font-family: 'Vladivostok';
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
 }
 
 div {
@@ -30,31 +31,39 @@ body {
     text-align: center;
     vertical-align: middle;
     display: table-cell;
+    font-size: 1.3rem;
 }
 
 .main {
-    font-size: 3.5rem;
+    font-size: 4rem;
+    font-weight: 600;
     color: white;
     position: relative;
-    user-select: none;
+}
+
+.muted {
+    margin: 1rem 0 2rem 0;
+    color: #8f8f8f;
+}
+
+.muted a {
+    border-bottom: 3px solid #ff1168;
+    box-shadow: inset 0 -4px 0 #ff1168;
+    text-decoration: none;
+    color: #8f8f8f;
+}
+
+.muted a:hover {
+    color: #fff;
+    background-color: #ff1168;
+    border-bottom: 3px solid #ff1168;
 }
 
 .links {
-    font-size: 1.2rem;
     list-style: none;
     padding: 0;
     margin: 0.5rem 0;
     color: white;
-}
-
-@media screen and (max-width: 450px) {
-    .main {
-        font-size: 3rem;
-    }
-
-    .links {
-        font-size: 1rem;
-    }
 }
 
 .links li {
@@ -78,183 +87,10 @@ body {
     border-bottom: 3px solid #4abdac;
 }
 
-.muted {
-    margin: 0.5rem 0 2rem 0;
-    color: #8f8f8f;
-}
-
-.muted a {
-    border-bottom: 3px solid #ff1168;
-    box-shadow: inset 0 -4px 0 #ff1168;
-    text-decoration: none;
-    color: #8f8f8f;
-}
-
-.muted a:hover {
-    color: #fff;
-    background-color: #ff1168;
-    border-bottom: 3px solid #ff1168;
-}
-
-
-@keyframes noise-anim {
-    0% {
-        clip: rect(49px, 9999px, 74px, 0)
+@media screen and (max-width: 450px) {
+    .main {
+        font-size: 5rem;
+        line-height: 1;
+        padding: 0 0.2rem 0 0.2rem;
     }
-    5% {
-        clip: rect(76px, 9999px, 49px, 0);
-    }
-    10% {
-        clip: rect(27px, 9999px, 84px, 0);
-    }
-    15% {
-        clip: rect(70px, 9999px, 100px, 0);
-    }
-    20% {
-        clip: rect(72px, 9999px, 84px, 0);
-    }
-    25% {
-        clip: rect(84px, 9999px, 11px, 0);
-    }
-    30% {
-        clip: rect(90px, 9999px, 97px, 0);
-    }
-    35% {
-        clip: rect(80px, 9999px, 92px, 0);
-    }
-    40% {
-        clip: rect(96px, 9999px, 7px, 0);
-    }
-    45% {
-        clip: rect(3px, 9999px, 32px, 0);
-    }
-    50% {
-        clip: rect(17px, 9999px, 23px, 0);
-    }
-    55% {
-        clip: rect(92px, 9999px, 26px, 0);
-    }
-    60% {
-        clip: rect(82px, 9999px, 17px, 0);
-    }
-    65% {
-        clip: rect(7px, 9999px, 42px, 0);
-    }
-    70% {
-        clip: rect(61px, 9999px, 57px, 0);
-    }
-    75% {
-        clip: rect(39px, 9999px, 12px, 0);
-    }
-    80% {
-        clip: rect(24px, 9999px, 54px, 0);
-    }
-    85% {
-        clip: rect(36px, 9999px, 40px, 0);
-    }
-    90% {
-        clip: rect(90px, 9999px, 54px, 0);
-    }
-    95% {
-        clip: rect(35px, 9999px, 59px, 0);
-    }
-    100% {
-        clip: rect(24px, 9999px, 30px, 0);
-    }
-}
-
-@keyframes noise-anim-2 {
-    0% {
-        clip: rect(100px, 9999px, 27px, 0);
-    }
-    5% {
-        clip: rect(100px, 9999px, 15px, 0);
-    }
-    10% {
-        clip: rect(48px, 9999px, 33px, 0);
-    }
-    15% {
-        clip: rect(84px, 9999px, 27px, 0);
-    }
-    20% {
-        clip: rect(39px, 9999px, 33px, 0);
-    }
-    25% {
-        clip: rect(30px, 9999px, 19px, 0);
-    }
-    30% {
-        clip: rect(81px, 9999px, 62px, 0);
-    }
-    35% {
-        clip: rect(58px, 9999px, 14px, 0);
-    }
-    40% {
-        clip: rect(58px, 9999px, 90px, 0);
-    }
-    45% {
-        clip: rect(81px, 9999px, 92px, 0);
-    }
-    50% {
-        clip: rect(34px, 9999px, 100px, 0);
-    }
-    55% {
-        clip: rect(21px, 9999px, 88px, 0);
-    }
-    60% {
-        clip: rect(50px, 9999px, 91px, 0);
-    }
-    65% {
-        clip: rect(58px, 9999px, 45px, 0);
-    }
-    70% {
-        clip: rect(25px, 9999px, 78px, 0);
-    }
-    75% {
-        clip: rect(55px, 9999px, 73px, 0);
-    }
-    80% {
-        clip: rect(24px, 9999px, 81px, 0);
-    }
-    85% {
-        clip: rect(77px, 9999px, 82px, 0);
-    }
-    90% {
-        clip: rect(16px, 9999px, 93px, 0);
-    }
-    95% {
-        clip: rect(61px, 9999px, 58px, 0);
-    }
-    100% {
-        clip: rect(19px, 9999px, 10px, 0);
-    }
-}
-
-.main:before {
-    content: attr(data-text);
-    position: absolute;
-    left: -2px;
-    text-shadow: 2px 0 blue;
-    top: 0;
-    color: white;
-    background: #141818;
-    overflow: hidden;
-    clip: rect(0, 900px, 0, 0);
-    animation: noise-anim-2 40s infinite linear alternate-reverse;
-    width: 100%;
-    user-select:none;
-}
-
-.main:after {
-    content: attr(data-text);
-    position: absolute;
-    left: 2px;
-    text-shadow: -2px 0 red;
-    top: 0;
-    color: white;
-    background: #141818;
-    overflow: hidden;
-    clip: rect(0, 900px, 0, 0);
-    animation: noise-anim 8s infinite linear alternate-reverse;
-    width: 100%;
-    user-select:none;
 }
