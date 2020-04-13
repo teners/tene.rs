@@ -1,10 +1,15 @@
-teners.me:
-    image: abiosoft/caddy
+version: '3.7'
+
+services:
+  teners.me:
+    image: caddy/caddy
     volumes:
-        - ./Caddyfile:/etc/Caddyfile
-        - ${CADDY_CRT}:/root/.caddy
-        - .:/srv
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - ./caddy_data:/data
+      - ./caddy_config:/config
+      - ./static:/usr/share/caddy
     ports:
-        - "80:80"
-        - "443:443"
-    restart: always
+      - "80:80"
+      - "443:443"
+    restart: unless-stopped
+    container_name: "caddy"

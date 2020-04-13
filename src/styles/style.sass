@@ -1,0 +1,63 @@
+@charset "utf-8"
+@import "themes.scss"
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap')
+
+html, body
+  height: 100%
+
+body
+  font-family: "IBM Plex Mono", monospace
+  font-size: 1.5rem
+
+h1
+  font-size: 4.5rem
+  @media (max-width: 720px)
+    font-size: 3rem
+
+@include withThemes()
+  background: getFromTheme('bgColor')
+  color: getFromTheme('textColor')
+  a
+    $border: 3px solid getFromTheme("linkColor")
+    color: getFromTheme("textColor")
+    border-bottom: $border
+    box-shadow: inset 0 -4px 0 getFromTheme("linkColor")
+    text-decoration: none
+    &:hover
+      color: getFromTheme("bgColor")
+      border-bottom: $border
+      background-color: getFromTheme("linkColor")
+
+#toggle-container
+  position: absolute
+  width: 100%
+  margin: 0 auto
+  text-align: center
+  font-size: 1rem
+
+.container
+  position: absolute
+  display: grid
+  margin: 4rem 15% 4rem 15%
+  @media (max-width: 720px)
+    margin: 3rem 10% 3rem 10%
+
+$contactsVerticalSpacing: 0.5rem
+.contacts
+  margin-top: 3rem
+  ul
+    padding: 0
+    list-style-type: none
+    margin-top: $contactsVerticalSpacing
+    li
+      margin-bottom: $contactsVerticalSpacing
+
+
+canvas
+  z-index: 0
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  overflow: hidden

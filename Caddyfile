@@ -1,7 +1,18 @@
-teners.me
-
-ext .html .pdf
-
-errors {
-    404 404.html
+{
+  email hi@teners.me
+}
+teners.me {
+  encode gzip zstd
+  root * /usr/share/caddy
+  try_files {path} {path}/ {path}.html
+  file_server browse
+  header {
+    Strict-Transport-Security max-age=31536000;
+    X-Frame-Options DENY
+    Cache-Control public
+  }
+  log {
+    output stdout
+    format logfmt
+  }
 }
