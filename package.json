@@ -4,8 +4,9 @@
   "description": "Personal website",
   "main": "src/scripts/index.ts",
   "scripts": {
-    "build": "webpack",
-    "serve": "webpack-dev-server"
+    "build": "webpack -p",
+    "build-dev": "webpack -d",
+    "serve-dev": "webpack-dev-server"
   },
   "author": "Sergey Sokolov <hi@teners.me>",
   "license": "MIT",
