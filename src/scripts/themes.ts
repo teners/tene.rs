@@ -3,7 +3,6 @@ function getEmojiByTheme(theme: string): string {
 }
 
 function toggleTheme() {
-    console.log('toggle')
     let storageTheme = localStorage.getItem('theme')
     let theme = storageTheme === 'dark' ? 'light' : 'dark'
     document.getElementById('app-root').className = `theme-${theme}`
@@ -12,7 +11,6 @@ function toggleTheme() {
 }
 
 export function initTheme() {
-    console.log('init')
     let storageTheme: string = localStorage.getItem('theme')
     let mediaTheme: string = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'light' : 'dark'
     if (!storageTheme) {

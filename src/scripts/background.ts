@@ -8,15 +8,19 @@ import {
 import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 
+import * as modelObj from '../static/models/computer.obj'
+import * as modelMtl from '../static/models/computer.mtl'
+import '../static/models/computer.png'
+
 let camera: PerspectiveCamera, light: PointLight, renderer: WebGLRenderer, scene: Scene;
 let model: Group;
-const modelRotationAngle = -0.005;
-const modelBasePath = "https://teners.me/s/voxelComputer/computer";
 
-export function initBackground() {
+const modelRotationAngle = -0.005;
+
+function initBackground() {
     scene = new Scene();
 
-    camera = new PerspectiveCamera(45,window.innerWidth/ window.innerHeight,1,300);
+    camera = new PerspectiveCamera(45,window.innerWidth / window.innerHeight,1,300);
     camera.position.z = 25;
 
     renderer = new WebGLRenderer({alpha: true, antialias: true});
@@ -35,10 +39,10 @@ export function initBackground() {
 
     let mtlLoader = new MTLLoader();
     let objLoader = new OBJLoader();
-    mtlLoader.load(`${modelBasePath}.mtl`, function (materials) {
+    mtlLoader.load(modelMtl, function (materials) {
         materials.preload();
         objLoader.setMaterials(materials);
-        objLoader.load(`${modelBasePath}.obj`, function (object) {
+        objLoader.load(modelObj, function (object) {
             scene.add(object);
             model = object;
             object.position.z -= 150;
@@ -49,14 +53,14 @@ export function initBackground() {
     });
 }
 
-export async function renderBackground() {
+function renderBackground() {
     requestAnimationFrame(renderBackground);
     try {
         model.rotateY(modelRotationAngle);
     }
-    catch (e) { await new Promise(r => setTimeout(r, 100)) }
+    catch (e) {}
     renderer.render(scene, camera);
 }
 
-initBackground()
-renderBackground()
+initBackground();
+renderBackground();

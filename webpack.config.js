@@ -18,7 +18,11 @@ module.exports = {
   resolve: {extensions: [ '.tsx', '.ts', '.js' ]},
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].bundle.js'
+    filename: '[name].bundle.js',
+    assetModuleFilename: 'assets/[name][ext]',
+  },
+  experiments: {
+    asset: true,
   },
   module: {
     rules: [
@@ -33,7 +37,7 @@ module.exports = {
         ]
       },
       {test: /\.css$/, use: ['style-loader', 'css-loader', 'postcss-loader']},
-      {test: /\.(obj|mtl|png)$/, use: ['file-loader']}
+      {test: /\.(obj|mtl|png)$/, type: 'asset/resource'},
     ]
   },
   plugins: [
@@ -43,11 +47,15 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Sergey Sokolov',
       template: './src/index.html',
-      favicon: './static/favicon.png',
+      favicon: './src/static/favicon.png',
       meta: {
         author: 'teners',
         charset: 'utf8',
       }
+    }),
+    new HtmlWebpackPlugin({
+      filename: "seryoja.html",
+      template: './src/seryoja.html',
     }),
   ]
 };
