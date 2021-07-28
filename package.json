@@ -18,7 +18,7 @@
     "html-loader": "2.1.2",
     "html-webpack-plugin": "4.4.1",
     "mini-css-extract-plugin": "^2.1.0",
-    "node-sass": "^5.0.0",
+    "node-sass": "^6.0.1",
     "postcss-loader": "^3.0.0",
     "preload-webpack-plugin": "^2.3.0",
     "sass-loader": "^12.1.0",
