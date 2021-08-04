@@ -11,7 +11,7 @@
   "author": "Sergey Sokolov <hi@teners.me>",
   "license": "The Unlicense",
   "engines": {
-    "node": "~16.5.0"
+    "node": ">=16.5.0 <17"
   },
   "devDependencies": {
     "autoprefixer": "^10.3.1",
