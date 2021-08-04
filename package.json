@@ -27,7 +27,7 @@
     "typescript": "^3.8.3",
     "webpack": "^5.0.0-beta.14",
     "webpack-cli": "^4.7.2",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
     "three": "^0.125.0"
