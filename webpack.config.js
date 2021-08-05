@@ -5,8 +5,11 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    compress: true,
+    static: {
+      directory: path.join(__dirname, 'dist'),
+      serveIndex: true,
+      watch: true
+    },
     host: '0.0.0.0',
     port: 9000,
     allowedHosts: ['*']
@@ -14,6 +17,9 @@ module.exports = {
   entry: {
     index: './src/scripts/index.ts',
     background: './src/scripts/background.ts',
+  },
+  optimization: {
+    runtimeChunk: 'single'
   },
   resolve: {extensions: [ '.tsx', '.ts', '.js' ]},
   output: {
@@ -27,7 +33,6 @@ module.exports = {
   module: {
     rules: [
       {test: /\.html$/, use: 'html-loader'},
-      {test: /\.tsx?$/, use: 'ts-loader', exclude: /node_modules/},
       {
         test: /\.sass$/,
         use: [
@@ -36,13 +41,15 @@ module.exports = {
           {loader: 'sass-loader', options: {sourceMap: true}}
         ]
       },
-      {test: /\.css$/, use: ['style-loader', 'css-loader', 'postcss-loader']},
+      {test: /\.css$/, use: ['postcss-loader', 'css-loader', 'style-loader']},
+      {test: /\.tsx?$/, use: 'ts-loader', exclude: /node_modules/},
       {test: /\.(obj|mtl|png)$/, type: 'asset/resource'},
     ]
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'style.css'
+      filename: 'style.css',
+      experimentalUseImportModule: true
     }),
     new HtmlWebpackPlugin({
       title: 'Sergey Sokolov',
@@ -56,6 +63,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "seryoja.html",
       template: './src/seryoja.html',
-    }),
+    })
   ]
 };

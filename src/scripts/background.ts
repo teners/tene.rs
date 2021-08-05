@@ -8,9 +8,9 @@ import {
 import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 
-import * as modelObj from '../static/models/computer.obj'
-import * as modelMtl from '../static/models/computer.mtl'
-import '../static/models/computer.png'
+import * as modelObj from '../static/models/computer.obj'  // webpackMode: "lazy"
+import * as modelMtl from '../static/models/computer.mtl' // webpackMode: "lazy"
+import '../static/models/computer.png' // webpackMode: "lazy"
 
 let camera: PerspectiveCamera, light: PointLight, renderer: WebGLRenderer, scene: Scene;
 let model: Group;

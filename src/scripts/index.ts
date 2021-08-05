@@ -1,4 +1,4 @@
-require('../styles/style.sass');
+import '../styles/style.sass';
 
 import { initTheme } from './themes'
 
