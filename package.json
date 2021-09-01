@@ -25,7 +25,7 @@
     "@size-limit/file": "^5.0.2",
     "@size-limit/webpack": "^5.0.2",
     "size-limit": "^5.0.2",
-    "webpack-dev-server": "^4.0.0-rc.0"
+    "webpack-dev-server": "^4.1.0"
   },
   "dependencies": {
     "autoprefixer": "^10.3.1",
