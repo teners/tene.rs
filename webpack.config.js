@@ -14,22 +14,8 @@ module.exports = {
     port: 9000,
     allowedHosts: ['*']
   },
-  entry: {
-    index: './src/scripts/index.ts',
-    background: './src/scripts/background.ts',
-  },
-  optimization: {
-    runtimeChunk: 'single'
-  },
-  resolve: {extensions: [ '.tsx', '.ts', '.js' ]},
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].bundle.js',
-    assetModuleFilename: 'assets/[name][ext]',
-  },
-  experiments: {
-    asset: true,
-  },
+  entry: './src/styles/style.sass',
+
   module: {
     rules: [
       {test: /\.html$/, use: 'html-loader'},
@@ -41,9 +27,7 @@ module.exports = {
           {loader: 'sass-loader', options: {sourceMap: true}}
         ]
       },
-      {test: /\.css$/, use: ['postcss-loader', 'css-loader', 'style-loader']},
-      {test: /\.tsx?$/, use: 'ts-loader', exclude: /node_modules/},
-      {test: /\.(obj|mtl|png)$/, type: 'asset/resource'},
+      {test: /\.css$/, use: ['style-loader', 'css-loader', 'postcss-loader']},
     ]
   },
   plugins: [
@@ -55,14 +39,6 @@ module.exports = {
       title: 'Sergey Sokolov',
       template: './src/index.html',
       favicon: './src/static/favicon.png',
-      meta: {
-        author: 'teners',
-        charset: 'utf8',
-      }
     }),
-    new HtmlWebpackPlugin({
-      filename: "seryoja.html",
-      template: './src/seryoja.html',
-    })
   ]
 };
