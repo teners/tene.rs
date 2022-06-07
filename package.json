@@ -27,7 +27,7 @@
     "@size-limit/webpack": "^6.0.3",
     "cssnano": "^5.0.9",
     "size-limit": "^6.0.3",
-    "webpack-dev-server": "^4.3.1"
+    "webpack-dev-server": "^4.9.2"
   },
   "dependencies": {
     "css-loader": "^6.2.0",
