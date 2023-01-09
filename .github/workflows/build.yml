@@ -9,18 +9,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Set up Node
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3
       with:
-        node-version: 16
+        node-version: 18
 
     - name: Get yarn cache directory path
       id: yarn-cache-dir-path
       run: echo "::set-output name=dir::$(yarn cache dir)"
 
     - name: Cache dependencies
-      uses: actions/cache@v1
+      uses: actions/cache@v3
       id: yarn-cache
       with:
         path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
@@ -29,7 +29,7 @@ jobs:
           ${{ runner.os }}-yarn-
 
     - name: Install dependencies
-      run: yarn install --prod
+      run: yarn install --immutable
 
     - name: Build static
       run: yarn build
