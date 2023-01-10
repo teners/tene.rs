@@ -172,14 +172,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@size-limit/file@npm:^6.0.3":
-  version: 6.0.4
-  resolution: "@size-limit/file@npm:6.0.4"
+"@size-limit/file@npm:^8.1.0":
+  version: 8.1.0
+  resolution: "@size-limit/file@npm:8.1.0"
   dependencies:
-    semver: 7.3.5
+    semver: 7.3.7
   peerDependencies:
-    size-limit: 6.0.4
-  checksum: c2f0b1fc3059a62abaf856148a1c9cce1a735007dbbb740f8e9ceeba49385a203898b15e92a28bd9af3dfa3c1c178cbe7595a7cbfc272bd9b0ef72cd8147ef75
+    size-limit: 8.1.0
+  checksum: f693b9a0e1533d54aa23125a8ceb65dfda0bc1aa60874490f2fa7ea6bc230954ab0e9ef1e06c1f9d70b1d2c813f7cf99beecc08d72607373611fb41af4b2cbd7
   languageName: node
   linkType: hard
 
@@ -4801,7 +4801,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:7.3.5, semver@npm:^7.3.4, semver@npm:^7.3.5":
+"semver@npm:7.3.7":
+  version: 7.3.7
+  resolution: "semver@npm:7.3.7"
+  dependencies:
+    lru-cache: ^6.0.0
+  bin:
+    semver: bin/semver.js
+  checksum: 2fa3e877568cd6ce769c75c211beaed1f9fce80b28338cadd9d0b6c40f2e2862bafd62c19a6cff42f3d54292b7c623277bcab8816a2b5521cf15210d43e75232
+  languageName: node
+  linkType: hard
+
+"semver@npm:^7.3.4, semver@npm:^7.3.5":
   version: 7.3.5
   resolution: "semver@npm:7.3.5"
   dependencies:
@@ -5344,7 +5355,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "teners.me@workspace:."
   dependencies:
-    "@size-limit/file": ^6.0.3
+    "@size-limit/file": ^8.1.0
     "@size-limit/webpack": ^8.1.0
     css-loader: ^6.7.3
     cssnano: ^5.1.14
