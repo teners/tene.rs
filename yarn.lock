@@ -3298,14 +3298,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mini-css-extract-plugin@npm:^2.4.4":
-  version: 2.4.4
-  resolution: "mini-css-extract-plugin@npm:2.4.4"
+"mini-css-extract-plugin@npm:^2.7.4":
+  version: 2.7.4
+  resolution: "mini-css-extract-plugin@npm:2.7.4"
   dependencies:
-    schema-utils: ^3.1.0
+    schema-utils: ^4.0.0
   peerDependencies:
     webpack: ^5.0.0
-  checksum: afc3c2d364096b3ec79c910f0b0e0f62b6861b84e0bcdf8c05b267e529b8f4e450984b0fc7afcd1e87616cbefcd688eeef1c41ce3c892a9c313f4dc9132189fb
+  checksum: 5776458eb78fff06eeebfa6682b5387c52cdaff0f6a5012769e81487f91d78b8fd1c6d114d04748de82825a8d155fd8324dbce86da8ceda9f299b4850f77d133
   languageName: node
   linkType: hard
 
@@ -5350,7 +5350,7 @@ __metadata:
     cssnano: ^5.1.14
     html-loader: 3.1.0
     html-webpack-plugin: 5.5.0
-    mini-css-extract-plugin: ^2.4.4
+    mini-css-extract-plugin: ^2.7.4
     node-sass: ^8.0.0
     preload-webpack-plugin: ^2.3.0
     sass-loader: ^12.1.0
