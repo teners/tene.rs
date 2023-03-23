@@ -38,7 +38,7 @@
     "preload-webpack-plugin": "^2.3.0",
     "sass-loader": "^12.1.0",
     "style-loader": "^3.3.0",
-    "webpack": "^5.75.0",
+    "webpack": "^5.76.3",
     "webpack-cli": "^4.9.1"
   },
   "packageManager": "yarn@3.3.1"
