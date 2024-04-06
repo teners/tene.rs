@@ -34,7 +34,7 @@ jobs:
     - uses: actions/download-artifact@v4
       with:
         name: 'dist'
-        path: $GITHUB_WORKSPACE/dist
+        path: ${{ GITHUB_WORKSPACE }}/dist
     - name: Deploy
       uses: appleboy/scp-action@master
       with:
