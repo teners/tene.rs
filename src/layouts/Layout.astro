@@ -1,0 +1,62 @@
+---
+import { Seo } from "astro-seo-meta";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="min-h-screen w-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="theme-color"
+      content="0400ff"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#0400ff"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link rel="canonical" href="https://tene.rs/" />
+    <Seo
+      title="sergei sokolov"
+      description="berlin-based software engineer"
+      facebook={{
+        image: "/og_image.png",
+        url: "https://tene.rs",
+        type: "website",
+      }}
+      twitter={{
+        image: "/twitter_image.png",
+        site: "@teners",
+        card: "summary",
+      }}
+    />
+  </head>
+  <body class="min-h-full h-full w-full">
+    <slot />
+  </body>
+</html>

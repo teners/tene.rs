@@ -1,45 +1,26 @@
 {
-  "name": "teners.me",
-  "version": "1.0.0",
-  "description": "Personal website",
-  "main": "src/scripts/index.ts",
+  "name": "tene.rs",
+  "type": "module",
+  "version": "2.0.0",
   "scripts": {
-    "build": "webpack build --mode=production",
-    "build-dev": "webpack build --mode=development",
-    "serve-dev": "webpack serve --mode=development",
-    "size": "yarn build && size-limit"
-  },
-  "size-limit": [
-    {
-      "path": "dist/",
-      "brotli": true,
-      "limit": "5 kB",
-      "webpack": false
-    }
-  ],
-  "author": "Sergey Sokolov <hi@teners.me>",
-  "license": "The Unlicense",
-  "engines": {
-    "node": ">=16.5.0 <17"
-  },
-  "devDependencies": {
-    "@size-limit/file": "^6.0.3",
-    "@size-limit/webpack": "^8.1.0",
-    "cssnano": "^5.1.14",
-    "size-limit": "^8.1.0",
-    "webpack-dev-server": "^4.11.1"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "format": "prettier -w src"
   },
   "dependencies": {
-    "css-loader": "^6.7.3",
-    "html-loader": "3.1.0",
-    "html-webpack-plugin": "5.5.0",
-    "mini-css-extract-plugin": "^2.4.4",
-    "node-sass": "^8.0.0",
-    "preload-webpack-plugin": "^2.3.0",
-    "sass-loader": "^12.1.0",
-    "style-loader": "^3.3.0",
-    "webpack": "^5.75.0",
-    "webpack-cli": "^4.9.1"
+    "@astrojs/check": "^0.5.10",
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.5.13",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.4.3"
   },
-  "packageManager": "yarn@3.3.1"
+  "devDependencies": {
+    "astro-purgecss": "^4.1.0",
+    "astro-seo-meta": "^4.1.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.13.0"
+  }
 }
