@@ -7,36 +7,32 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Node
-      uses: actions/setup-node@v3
+    - uses: actions/checkout@v4
+    - uses: pnpm/action-setup@v3
       with:
-        node-version: 18
-    - name: Set up yarn
-      run: yarn set version berry
-
-    - name: Get yarn cache directory path
-      id: yarn-cache-dir-path
-      run: echo "yarn-cache-dir=$(yarn config get cacheFolder)" >> $GITHUB_OUTPUT
-
-    - name: Cache dependencies
-      uses: actions/cache@v3
-      id: yarn-cache
+        version: 8
+    - uses: actions/setup-node@v4
       with:
-        path: ${{ steps.yarn-cache-dir-path.outputs.yarn-cache-dir }}
-        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-yarn-
-
+        node-version: 20
+        cache: 'pnpm'
     - name: Install dependencies
-      run: yarn install --immutable
+      run: pnpm install --prod
+    - name: Build
+      run: pnpm build
+    - uses: actions/upload-artifact@v4
+      with:
+        name: 'dist'
+        path: 'dist'
+        retention-days: 1
 
-    - name: Build static
-      run: yarn build
-
-    - name: Publish
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/download-artifact@v4
+      with:
+        name: 'dist'
+    - name: Deploy
       uses: appleboy/scp-action@master
       with:
         host: ${{ secrets.HOST }}

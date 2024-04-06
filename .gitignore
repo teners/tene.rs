@@ -1,3 +1,7 @@
-.idea
-.yarn
-.yarnrc.yml
+dist/
+.astro/
+ dependencies
+node_modules/
+pnpm-debug.log*
+.env*
+.DS_Store

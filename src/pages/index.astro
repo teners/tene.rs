@@ -1,0 +1,37 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Contact from "../components/Contact.astro";
+---
+
+<Layout title="Sergei Sokolov">
+  <div
+    class="text-xl w-full min-h-screen grid grid-rows-2 grid-cols-1 md:grid-rows-1 md:grid-cols-2"
+  >
+    <main aria-label="Intro" class="p-4 sm:p-8">
+      <h1 class="text-6xl font-bold pb-8" aria-label="hi, i'm sergei">
+        hi, i'm&nbsp;<ruby
+          >sergei<rt class="text-sm font-normal tracking-[0.2em]">[sɪrgˈeɪ]</rt
+          ></ruby
+        >
+      </h1>
+      <p class="pb-4">
+        i'm a berlin-based software engineer with 7+ years of&nbsp;experience
+      </p>
+      <p>
+        currently i'm a full stack developer @ semrush with strong focus
+        on&nbsp;python & typescript
+      </p>
+    </main>
+    <footer
+      aria-label="Contacts"
+      class="p-4 sm:p-8 text-white text-underline bg-gray-900 font-mono"
+    >
+      <ul class="list-inside list-md flex flex-col items-start gap-2 sm:pt-6">
+        <p aria-hidden="true">$ cat contacts.md</p>
+        <Contact title="GitHub" href="https://github.com/teners" />
+        <Contact title="Email" href="mailto:hi@tene.rs" />
+        <Contact title="Telegram" href="https://t.me/teners" />
+      </ul>
+    </footer>
+  </div>
+</Layout>
