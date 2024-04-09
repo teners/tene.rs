@@ -10,16 +10,16 @@ dependencies:
     version: 0.5.10(prettier-plugin-astro@0.13.0)(prettier@3.2.5)(typescript@5.4.3)
   '@astrojs/tailwind':
     specifier: ^5.1.0
-    version: 5.1.0(astro@4.5.13)(tailwindcss@3.4.3)
+    version: 5.1.0(astro@4.5.17)(tailwindcss@3.4.3)
   astro:
-    specifier: ^4.5.13
-    version: 4.5.13(typescript@5.4.3)
+    specifier: ^4.5.17
+    version: 4.5.17(typescript@5.4.3)
   astro-purgecss:
     specifier: ^4.1.0
-    version: 4.1.0(astro@4.5.13)(purgecss@5.0.0)
+    version: 4.1.0(astro@4.5.17)(purgecss@5.0.0)
   astro-seo-meta:
     specifier: ^4.1.0
-    version: 4.1.0(astro@4.5.13)
+    version: 4.1.0(astro@4.5.17)
   tailwindcss:
     specifier: ^3.4.3
     version: 3.4.3
@@ -144,13 +144,13 @@ packages:
       prismjs: 1.29.0
     dev: false
 
-  /@astrojs/tailwind@5.1.0(astro@4.5.13)(tailwindcss@3.4.3):
+  /@astrojs/tailwind@5.1.0(astro@4.5.17)(tailwindcss@3.4.3):
     resolution: {integrity: sha512-BJoCDKuWhU9FT2qYg+fr6Nfb3qP4ShtyjXGHKA/4mHN94z7BGcmauQK23iy+YH5qWvTnhqkd6mQPQ1yTZTe9Ig==}
     peerDependencies:
       astro: ^3.0.0 || ^4.0.0
       tailwindcss: ^3.0.24
     dependencies:
-      astro: 4.5.13(typescript@5.4.3)
+      astro: 4.5.17(typescript@5.4.3)
       autoprefixer: 10.4.19(postcss@8.4.38)
       postcss: 8.4.38
       postcss-load-config: 4.0.2(postcss@8.4.38)
@@ -1258,26 +1258,26 @@ packages:
     resolution: {integrity: sha512-I1jXZMjAgCMmxT4qxXfPXa6SthSoE8h6gkSI9BGGNv8mP8G/v0blc+qFnZu6K42vTOiuME596QaLO0TP3Lk0xg==}
     dev: false
 
-  /astro-purgecss@4.1.0(astro@4.5.13)(purgecss@5.0.0):
+  /astro-purgecss@4.1.0(astro@4.5.17)(purgecss@5.0.0):
     resolution: {integrity: sha512-CVxAXVuKYJZS2lbFEJJ9lKCnUx0FSd9+5muZTLdhXBWHiNpx1PKmR9WNJykP4ArCdpDPjkWSudyYUqMDAAA43w==}
     peerDependencies:
       astro: ^4.0.0
       purgecss: ^5.0.0
     dependencies:
-      astro: 4.5.13(typescript@5.4.3)
+      astro: 4.5.17(typescript@5.4.3)
       purgecss: 5.0.0
     dev: false
 
-  /astro-seo-meta@4.1.0(astro@4.5.13):
+  /astro-seo-meta@4.1.0(astro@4.5.17):
     resolution: {integrity: sha512-v5qULt/c2hp9u6JtRyZeWTeb6YC82XDMzVcEf7XlRSuvs3C6KUQxeIOp5j+uOIek42CZHcyhbWzQF+FoRbQlfg==}
     peerDependencies:
       astro: ^4.0.0
     dependencies:
-      astro: 4.5.13(typescript@5.4.3)
+      astro: 4.5.17(typescript@5.4.3)
     dev: false
 
-  /astro@4.5.13(typescript@5.4.3):
-    resolution: {integrity: sha512-vbkiPH0J8dp5OlsvQpW3PcuV36U4vGRcdcL/LxXDwmeVjzVo6DH3Fkv+DAU5UDs7ciYodadomOo4+VZKvi8ylw==}
+  /astro@4.5.17(typescript@5.4.3):
+    resolution: {integrity: sha512-fr5onZt7MOe+6v08Ub1AZL9eUVo4f0y0nvL55AFMpVG2bMM1/omcwAH1uU2mkvwMLLtcd4RDtYz4mtJzd54Nfw==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
     dependencies:
