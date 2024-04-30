@@ -17,7 +17,7 @@
     "tailwindcss": "^3.4.3",
     "typescript": "^5.4.3",
     "astro-purgecss": "^4.1.0",
-    "astro-seo-meta": "^4.1.0"
+    "astro-seo-meta": "^4.1.1"
   },
   "devDependencies": {
     "prettier": "^3.2.5",

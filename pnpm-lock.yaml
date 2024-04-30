@@ -18,8 +18,8 @@ dependencies:
     specifier: ^4.1.0
     version: 4.1.0(astro@4.5.13)(purgecss@5.0.0)
   astro-seo-meta:
-    specifier: ^4.1.0
-    version: 4.1.0(astro@4.5.13)
+    specifier: ^4.1.1
+    version: 4.1.1(astro@4.5.13)
   tailwindcss:
     specifier: ^3.4.3
     version: 3.4.3
@@ -1268,8 +1268,8 @@ packages:
       purgecss: 5.0.0
     dev: false
 
-  /astro-seo-meta@4.1.0(astro@4.5.13):
-    resolution: {integrity: sha512-v5qULt/c2hp9u6JtRyZeWTeb6YC82XDMzVcEf7XlRSuvs3C6KUQxeIOp5j+uOIek42CZHcyhbWzQF+FoRbQlfg==}
+  /astro-seo-meta@4.1.1(astro@4.5.13):
+    resolution: {integrity: sha512-hZdqKLAgjRTW4LPcYMGfH5VuA4Zidv6gYmJgw0Dw7QmPExuSLnEqFHLreRzOdQibqH4JD6PHrHoIHrUb3HUs2A==}
     peerDependencies:
       astro: ^4.0.0
     dependencies:
