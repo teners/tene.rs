@@ -22,37 +22,35 @@ const { title } = Astro.props;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400..800&display=swap"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&display=swap"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.css"
+      integrity="sha512-gnAN+RgTMylunXI7AMg+PtcUGpKZFkZJoFIkAWvdPFRrFJz3p2tx4+9xbjILRfN7CzoViMgS8vSf06fSQzWZjA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <meta name="generator" content={Astro.generator} />
     <meta
       name="theme-color"
-      content="0400ff"
+      content="1a1b26"
       media="(prefers-color-scheme: light)"
     />
     <meta
       name="theme-color"
-      content="#0400ff"
+      content="#1a1b26"
       media="(prefers-color-scheme: dark)"
     />
     <link rel="canonical" href="https://tene.rs/" />
     <Seo
-      title="sergei sokolov"
+      title={title}
       description="berlin-based software engineer"
       facebook={{
         image: "/og_image.png",
         url: "https://tene.rs",
         type: "website",
-      }}
-      twitter={{
-        image: "/twitter_image.png",
-        site: "@teners",
-        card: "summary",
       }}
     />
   </head>
