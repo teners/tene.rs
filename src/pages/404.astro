@@ -1,19 +1,153 @@
 ---
 import Layout from "../layouts/Layout.astro";
+const currentPath = Astro.url.pathname.slice(1);
 ---
 
-<Layout title="Sergei Sokolov">
-  <main
-    class="text-xl min-h-screen container mx-auto flex flex-col items-center justify-center"
-  >
-    <p>
-      nothing to see here<p>
-        <p>
-          <a
-            class="text-blue-600 hover:ring-2 hover:ring-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
-            href="/">back to the index page</a>
-        </p>
-      </p>
+<Layout title="teners">
+  <main>
+    <header class="tmux-status-bar" aria-hidden="true">
+      <div class="tmux-tab tmux-tab-active">bash:/home/teners</div>
+    </header>
+    <p class="term-command">
+      <span aria-hidden="true">
+        <span class="text-blue">/home/</span><span class="text-blue text-strong"
+          >teners</span
+        >
+      </span>
+      <br />
+      <span aria-hidden="true">
+        <span class="text-green text-strong">&gt;</span>
+        <span class="text-red">{currentPath}</span>
+      </span>
+      <br />
+      <span class="text-gray">bash: {currentPath}: command not found</span>
+    </p>
+    <p aria-hidden="true" class="term-command">
+      <span class="text-blue">/home/</span><span class="text-blue text-strong"
+        >teners</span
+      >
+      <br />
+      <span class="text-green text-strong">&gt;</span>
     </p>
   </main></Layout
 >
+
+<style>
+  :root {
+    --font-name: "JetBrains Mono";
+    --bg-color: #1a1b26;
+    --text-color: #e9e9ed;
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-name), monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+  .tmux-status-bar {
+    width: 100%;
+    margin: 0;
+    background-color: #16161e;
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+  }
+
+  .tmux-tab {
+    width: fit-content;
+    background-color: #323449;
+    counter-increment: tabs-counter;
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+  }
+
+  .tmux-tab::before {
+    content: counter(tabs-counter);
+    background-color: #7847bd;
+    padding: 0 6px 0 3px;
+    color: var(--text-color);
+  }
+
+  .tmux-tab-active {
+    background-color: #bb9af7;
+    color: #16161e;
+    font-weight: 600;
+  }
+
+  .term-command {
+    padding-top: 5px;
+  }
+
+  h1,
+  h2 {
+    font-size: inherit;
+    font-weight: 400;
+  }
+
+  .md-link {
+    color: var(--text-color);
+    text-decoration: none;
+  }
+
+  .md-list li::marker {
+    content: "";
+  }
+
+  .md-link:hover {
+    cursor: pointer;
+    box-shadow:
+      0px 0px 0px 0px,
+      0px 0px 0px 2px,
+      0px 0px 0px 0px;
+  }
+
+  .text-strong {
+    font-weight: 600;
+  }
+
+  .text-underline {
+    text-decoration: underline;
+  }
+
+  .text-gray {
+    color: #c7c7d1;
+  }
+
+  .text-blue {
+    color: #2e7de9;
+  }
+
+  .text-green {
+    color: #9ece6a;
+  }
+
+  .text-cyan {
+    color: #7dcfff;
+  }
+
+  .text-pink {
+    color: #bb9af7;
+  }
+
+  .bat-easter-egg {
+    margin: 0;
+    padding: 0;
+    background-color: inherit;
+    color: inherit;
+    text-decoration: none;
+    border: none;
+    font-family: inherit;
+  }
+
+  .bat-easter-egg:hover {
+    cursor: pointer;
+  }
+
+  .bat-easter-egg:hover::after {
+    content: "🦇";
+  }
+</style>
